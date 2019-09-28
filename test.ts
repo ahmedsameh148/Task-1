@@ -27,7 +27,7 @@ var check = function (name:string){
 for(let i=0; i<100; i++){
     grid[i]=[];
 }
-console.log(members.length);
+
 for(let i=0; i<members.length; i++) {
     var tmp: Member = new Member();
     tmp.committee = members[i].committee;
