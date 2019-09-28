@@ -29,10 +29,11 @@ for(let i=0; i<100; i++){
 }
 
 for(let i=0; i<members.length; i++) {
+
     var tmp: Member = new Member();
     tmp.committee = members[i].committee;
     tmp.firstName = members[i].firstName;
-    tmp.joinDate = members[i].joinDate;
+    tmp.joinDate = new Date(members[i].joinDate);
     tmp.lastName = members[i].lastName;
     tmp.middleName = members[i].middleName;
     tmp.fullName = members[i].firstName + " " + members[i].middleName + " " + members[i].lastName;
@@ -57,6 +58,6 @@ for(let i=0; i<grid.length; i++){
         else return 0;
     });
     for(let y=0; y<grid[i].length; y++){
-        console.log((y+1)+"- Name : "+grid[i][y].fullName+" , Joined In : "+grid[i][y].joinDate);
+        console.log((y+1)+"- Name : "+grid[i][y].fullName+" , Joined In : " + grid[i][y].joinDate.toUTCString());
     }
 }
